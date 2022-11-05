@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import logoimg from '../imgs/logo.png';
 import sendicon from '../imgs/sendicon.png';
+import robotimg from '../imgs/robotimg.png';
 
 
 // 메인화면 디자인 --------------------------------------------
@@ -47,7 +48,9 @@ export const ChatBox = styled.div`
     margin-top: 78px;
     margin-left: 31px;
     position: relative;
-    padding: 20px 20px 20px 0;
+    padding: 20px 20px 0 20px;
+
+    overflow: hidden;
 `;
 
 export const InputBox = styled.div`
@@ -112,7 +115,74 @@ export const ClearConversation = styled.button`
     }
 `;
 
+export const Robot = styled.div`
+    display: flex;
+    align-items: flex-start;
+    float: left;
+`;
 
+export const RobotImg = styled.img.attrs({
+    src: robotimg,
+})`
+    width: 20px;
+    height: 20.4px;
+    margin-top: 2px;
+`;
+
+export const RobotNameAndMsg = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+`;
+
+export const RobotName = styled.div`
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #333333;
+`;
+
+export const RobotMsg = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    margin-top: 4px;
+
+    width: 95px;
+    height: 25px;
+
+    background: #FFFFFF;
+    border-radius: 0px 10px 10px 10px;
+
+    // font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+`;
+
+export const MyMsg = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    padding: 8px 12px;
+    width: 38px;
+    height: 25px;
+    background: #A56BEE;
+    border-radius: 10px 10px 0px 10px;
+
+    // font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+`;
 
 
 

@@ -32,6 +32,13 @@ const MainPage = () => {
                 <styled.LogoImg />AI chat
             </styled.Logo>
             <styled.ChatBox>
+                <styled.Robot>
+                    <styled.RobotImg />
+                    <styled.RobotNameAndMsg>
+                        <styled.RobotName>BotName</styled.RobotName>
+                        <styled.RobotMsg>Hello~oooo</styled.RobotMsg>
+                    </styled.RobotNameAndMsg>
+                </styled.Robot>
                 <styled.InputBox>
                     <styled.Input placeholder='메시지를 입력하세요.' />
                     <styled.SendButton />
