@@ -12,7 +12,7 @@ const MainPage = () => {
 
     const Message = () => {
         console.log(sendMsg);
-        
+
         const response = axios.post(
             'https://main-chatbot-api-ainize-team.endpoint.ainize.ai/v1/bot/chat',
             // '{\n  "message": "Hi!"\n}',
@@ -85,7 +85,7 @@ const MainPage = () => {
                         <styled.RobotMsg>{isMessage}</styled.RobotMsg>
                     </styled.RobotNameAndMsg>
                 </styled.Robot>
-                {isMessage && <Message />}
+                {/* {isMessage && <Message />} */}
                 
                 <styled.InputBox>
                     <styled.Input id='textinput' placeholder='메시지를 입력하세요.' onChange={onChange} value={sendMsg}/>
