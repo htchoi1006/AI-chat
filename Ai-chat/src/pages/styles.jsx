@@ -149,10 +149,11 @@ export const RobotMsg = styled.div`
     align-items: center;
     justify-content: center;
     padding: 8px 12px;
+    padding-top: 20px;
     margin-top: 4px;
 
-    width: 95px;
-    height: 25px;
+    width: 180px;
+    height: 60px;
 
     background: #FFFFFF;
     border-radius: 0px 10px 10px 10px;
@@ -163,6 +164,8 @@ export const RobotMsg = styled.div`
     font-size: 16px;
     line-height: 24px;
     color: #333333;
+    
+    overflow: auto;
 `;
 
 export const MyMsg = styled.div`
