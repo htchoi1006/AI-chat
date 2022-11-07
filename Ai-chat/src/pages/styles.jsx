@@ -48,7 +48,7 @@ export const ChatBox = styled.div`
     margin-top: 78px;
     margin-left: 31px;
     position: relative;
-    padding: 20px 20px 0 20px;
+    padding: 0px 20px 0 20px;
 
     overflow: hidden;
 `;
@@ -119,6 +119,7 @@ export const Robot = styled.div`
     display: flex;
     align-items: flex-start;
     float: left;
+    margin-top: 20px;
 `;
 
 export const RobotImg = styled.img.attrs({
@@ -174,10 +175,12 @@ export const MyMsg = styled.div`
     justify-content: center;
     float: right;
     padding: 8px 12px;
-    width: 38px;
+    width: 120px;
     height: 25px;
     background: #A56BEE;
     border-radius: 10px 10px 0px 10px;
+    margin-top: 20px;
+    margin-left: 420px;
 
     // font-family: 'Roboto';
     font-style: normal;
@@ -185,6 +188,8 @@ export const MyMsg = styled.div`
     font-size: 16px;
     line-height: 24px;
     color: #ffffff;
+
+    overflow: auto;
 `;
 
 

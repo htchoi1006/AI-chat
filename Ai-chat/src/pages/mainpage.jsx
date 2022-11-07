@@ -2,9 +2,14 @@ import React, { useState, useCallback, useEffect, useRef, } from 'react';
 import axios from 'axios';
 import * as styled from './styles.jsx';
 
+
+
+
+
 const MainPage = () => {
-    const [isMessage, setIsMessage] = useState(false);
-    const [sendMsg, setSendMsg] = useState("");
+    const [isMessage, setIsMessage] = useState(false);   //로봇 메시지
+    const [sendMsg, setSendMsg] = useState("");  //내 메시지
+    const mymessage = sendMsg;
 
     const onChange = (e) => {
         setSendMsg(e.target.value);
@@ -15,7 +20,6 @@ const MainPage = () => {
 
         const response = axios.post(
             'https://main-chatbot-api-ainize-team.endpoint.ainize.ai/v1/bot/chat',
-            // '{\n  "message": "Hi!"\n}',
             {
                 'message': sendMsg
             },
@@ -33,16 +37,6 @@ const MainPage = () => {
             .catch(function (error) {
                 console.log(error);
             });
-
-    
-        // axios(response)
-        //     .then(function (response) {
-                // setIsMessage(JSON.stringify(response.data));
-                // console.log(JSON.stringify(response.data));
-        //     })
-        //     .catch(function (error) {
-        //         console.log(error);
-        //     });    
     }
 
 
@@ -78,6 +72,7 @@ const MainPage = () => {
                 <styled.LogoImg />AI chat
             </styled.Logo>
             <styled.ChatBox>
+                <styled.MyMsg>{mymessage}</styled.MyMsg>
                 <styled.Robot>
                     <styled.RobotImg />
                     <styled.RobotNameAndMsg>
@@ -85,11 +80,11 @@ const MainPage = () => {
                         <styled.RobotMsg>{isMessage}</styled.RobotMsg>
                     </styled.RobotNameAndMsg>
                 </styled.Robot>
-                {/* {isMessage && <Message />} */}
+                
                 
                 <styled.InputBox>
                     <styled.Input id='textinput' placeholder='메시지를 입력하세요.' onChange={onChange} value={sendMsg}/>
-                    <styled.SendButton onClick={Message} />
+                    <styled.SendButton onClick={() => { Message(); }} />
                 </styled.InputBox>
             </styled.ChatBox>
             <styled.ClearConversation onClick={showModal}>
